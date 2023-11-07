@@ -3,6 +3,7 @@
 #define SIZE 100
 
 int addition(int[]);
+int subtraction(int[]);
 
 int main() {
 
@@ -11,14 +12,14 @@ int main() {
 
     while(menu != 0) {
         
-        printf("\nSelect type of calculation:\n1)Addition\n0)Exit\n:");
+        printf("\nSelect type of calculation:\n1)Addition\n2)Subtraction\n0)Exit\n:");
         scanf("%d", &menu);
 
         switch (menu) {
             case 0: {
                 break;
             }
-            case 1 : {
+            case 1 : case 2 : {
                 int user = 1;
                 int i = 0;
                 int nums[SIZE] = {0};
@@ -29,7 +30,12 @@ int main() {
                     i++;
                 }
                 
-                printf("\nResult: %d", addition(nums));
+                if( menu == 1) {
+                    printf("\nResult: %d", addition(nums));
+                }
+                else if (menu == 2) {
+                    printf("\nResult: %d", subtraction(nums));
+                }
                 break; 
             }
             
@@ -43,6 +49,16 @@ int addition(int nums[]) {
     int result = 0;
     while (nums[i] != 0){
         result += nums[i];
+        i++;
+    }
+    return result;
+}
+
+int subtraction(int nums[]) {
+    int i = 0;
+    int result = 0;
+    while (nums[i] != 0){
+        result -= nums[i];
         i++;
     }
     return result;
