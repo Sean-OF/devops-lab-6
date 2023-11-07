@@ -7,7 +7,7 @@ int subtraction(int[]);
 
 int main() {
 
-    printf("Sample program - Calculator\n");
+    printf("Sample program Version 3 - Calculator\n");
     int menu = 1;
 
     while(menu != 0) {
