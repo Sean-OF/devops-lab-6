@@ -7,7 +7,7 @@ int subtraction(int[]);
 
 int main() {
 
-    printf("Sample program Version 4 - Calculator\n");
+    printf("Sample program Version 4 Test 2 - Calculator\n");
 /*testing
 workflow*/
     int menu = 1;
